@@ -1,6 +1,6 @@
 {
   "name": "get-installed-path",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get the installation path of the given package if it is installed globally or locally.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
