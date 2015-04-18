@@ -14,7 +14,14 @@ npm test
 
 ```js
 var getInstalledPath = require('get-installed-path');
+
+getInstalledPath('npm');
+//=> '/home/charlike/path/to/global/modules/node_modules/npm'
+
+getInstalledPath('detect-installed', true);
+//=> '/home/path/to/get-installed-path/node_modules/detect-installed'
 ```
+> give `true` as second argument and it will check in local modules
 
 
 ## Author
