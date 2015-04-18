@@ -17,7 +17,21 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/get-installed-path.git"
   },
-  "keywords": [],
+  "keywords": [
+    "filepath",
+    "get",
+    "global",
+    "globally",
+    "install",
+    "installed",
+    "local",
+    "locally",
+    "npm",
+    "package",
+    "path",
+    "pkg",
+    "resolve"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/get-installed-path/blob/master/license.md"
