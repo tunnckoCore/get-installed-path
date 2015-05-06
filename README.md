@@ -4,7 +4,7 @@
 
 ## Install
 ```
-npm i --save get-installed-path
+npm i get-installed-path --save
 npm test
 ```
 
@@ -13,13 +13,13 @@ npm test
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var getInstalledPath = require('get-installed-path');
+var getInstalledPath = require('get-installed-path')
 
-getInstalledPath('npm');
+getInstalledPath('npm')
 //=> '/home/charlike/path/to/global/modules/node_modules/npm'
 
-getInstalledPath('detect-installed', true);
-//=> '/home/path/to/get-installed-path/node_modules/detect-installed'
+getInstalledPath('detect-installed', true)
+//=> '/home/path/to/cwd/node_modules/detect-installed'
 ```
 > give `true` as second argument and it will check in local modules
 
@@ -29,7 +29,7 @@ getInstalledPath('detect-installed', true);
 - [is-installed](https://github.com/tunnckoCore/is-installed): Checks that given package is installed on the system -… [more](https://github.com/tunnckoCore/is-installed)
 - [is-missing](https://github.com/tunnckoCore/is-missing): Check that given `name` or `user/repo` exists in npm registry… [more](https://github.com/tunnckoCore/is-missing)
 - [is-match](https://github.com/jonschlinkert/is-match): Create a matching function from a glob pattern, regex, string,… [more](https://github.com/jonschlinkert/is-match)
-- [npm-related](https://github.com/tunnckoCore/npm-related#readme): Thin wrapper on top of `helper-related` for generating a list… [more](https://github.com/tunnckoCore/npm-related#readme)
+- [npm-related](https://github.com/tunnckoCore/npm-related): Thin wrapper on top of `helper-related` for generating a list… [more](https://github.com/tunnckoCore/npm-related)
 - [npm-pkgs-filter](https://github.com/tunnckoCore/npm-pkgs-filter): Filter the list of user npm packages from the [npmjs.com](https://npmjs.com)… [more](https://github.com/tunnckoCore/npm-pkgs-filter)
 
 
