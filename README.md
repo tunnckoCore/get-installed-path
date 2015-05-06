@@ -1,4 +1,4 @@
-## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
+## [![npm][npmjs-img]][npmjs-url] [![standard style][standard-img]][standard-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
 > Get the installation path of the given package if it is installed globally or locally.
 
@@ -60,6 +60,9 @@ Released under the [`MIT`][license-url] license.
 
 [contrib-more]: http://j.mp/1stW47C
 [contrib-graf]: https://github.com/tunnckoCore/get-installed-path/graphs/contributors
+
+[standard-url]: https://github.com/feross/standard
+[standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat
 
 ***
 
