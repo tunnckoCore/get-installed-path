@@ -1,6 +1,6 @@
 {
   "name": "get-installed-path",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get the installation path of the given package if it is installed globally or locally.",
   "scripts": {
     "test": "standard && node test.js",

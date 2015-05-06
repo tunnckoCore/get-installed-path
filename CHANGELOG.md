@@ -1,5 +1,10 @@
 
 
+## v1.0.2 / May 6, 2015
+- Release v1.0.2 / npm@v1.0.2
+- standard style for the example usage
+- plus some tweaks
+
 ## v1.0.1 / May 6, 2015
 - Release v1.0.1 / npm@v1.0.1
 - add related section, close #1
