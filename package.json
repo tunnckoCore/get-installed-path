@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "Get the installation path of the given package if it is installed globally or locally.",
   "scripts": {
-    "lint": "jshint index.js && jscs index.js --reporter inline",
-    "test": "node test.js",
-    "test-cov": "istanbul cover test.js",
-    "test-travis": "istanbul cover test.js --report lcovonly"
+    "test": "standard && node test.js",
+    "travis": "standard && istanbul cover test.js --report lcovonly"
   },
   "author": {
     "name": "Charlike Mike Reagent",
@@ -43,6 +41,7 @@
   "devDependencies": {
     "assertit": "^0.1.0",
     "ends-with": "^0.2.0",
-    "istanbul-harmony": "~0.3.1"
+    "istanbul": "^0.3.9",
+    "standard": "^3.7.3"
   }
 }

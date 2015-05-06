@@ -5,19 +5,19 @@
  * Released under the MIT license.
  */
 
-'use strict';
+'use strict'
 
-var path = require('path');
-var modules = require('global-modules');
-var detectInstalled = require('detect-installed');
+var path = require('path')
+var modules = require('global-modules')
+var detectInstalled = require('detect-installed')
 
-module.exports = function getInstalledPath(name, local) {
+module.exports = function getInstalledPath (name, local) {
   if (detectInstalled(name)) {
-    return path.join(modules, name);
+    return path.join(modules, name)
   }
   if (detectInstalled(name, local)) {
-    var cwd = process.cwd();
-    return path.join(cwd, 'node_modules', name);
+    var cwd = process.cwd()
+    return path.join(cwd, 'node_modules', name)
   }
-  return '';
-};
+  return ''
+}
