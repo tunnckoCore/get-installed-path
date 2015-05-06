@@ -44,7 +44,7 @@ Released under the [`MIT`][license-url] license.
 [coveralls-url]: https://coveralls.io/r/tunnckoCore/get-installed-path?branch=master
 [coveralls-img]: https://img.shields.io/coveralls/tunnckoCore/get-installed-path.svg?style=flat
 
-[license-url]: https://github.com/tunnckoCore/get-installed-path/blob/master/license.md
+[license-url]: https://github.com/tunnckoCore/get-installed-path/blob/master/LICENSE.md
 [license-img]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 
 [travis-url]: https://travis-ci.org/tunnckoCore/get-installed-path
