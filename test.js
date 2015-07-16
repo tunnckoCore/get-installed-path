@@ -1,9 +1,11 @@
-/**
+/*!
  * get-installed-path <https://github.com/tunnckoCore/get-installed-path>
  *
- * Copyright (c) 2015 Charlike Mike Reagent, contributors.
+ * Copyright (c) 2015 Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)
  * Released under the MIT license.
  */
+
+/* jshint asi:true */
 
 'use strict'
 
@@ -17,17 +19,8 @@ test('get-installed-path:', function () {
       getInstalledPath([1, 2, 3])
     }
 
-    test.throws(fixture, /expect `name` to be string/)
+    test.throws(fixture, /expect `name` be string/)
     test.throws(fixture, TypeError)
-    done()
-  })
-  test('should throw Error if empty string given', function (done) {
-    function fixture () {
-      getInstalledPath('')
-    }
-
-    test.throws(fixture, /expect `name` to be non empty string/)
-    test.throws(fixture, Error)
     done()
   })
   test('should return filepath of globally installed package', function (done) {

@@ -1,19 +1,21 @@
 {
   "name": "get-installed-path",
   "version": "1.0.2",
-  "description": "Get the installation path of the given package if it is installed globally or locally.",
+  "description": "Get locally or globally installation path of the given package. Support sync and callback api.",
+  "repository": "tunnckoCore/get-installed-path",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "standard && node test.js",
-    "travis": "standard && istanbul cover test.js --report lcovonly"
+    "test": "standard && node test.js"
   },
-  "author": {
-    "name": "Charlike Mike Reagent",
-    "email": "mameto_100@mail.bg",
-    "url": "https://github.com/tunnckoCore"
+  "dependencies": {
+    "detect-installed": "~1.0.4",
+    "global-modules": "~0.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/tunnckoCore/get-installed-path.git"
+  "devDependencies": {
+    "assertit": "^0.1.0",
+    "ends-with": "^0.2.0"
   },
   "keywords": [
     "filepath",
@@ -29,19 +31,5 @@
     "path",
     "pkg",
     "resolve"
-  ],
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tunnckoCore/get-installed-path/blob/master/LICENSE.md"
-  },
-  "dependencies": {
-    "detect-installed": "~1.0.1",
-    "global-modules": "~0.1.0"
-  },
-  "devDependencies": {
-    "assertit": "^0.1.0",
-    "ends-with": "^0.2.0",
-    "istanbul": "^0.3.9",
-    "standard": "^3.7.3"
-  }
+  ]
 }
