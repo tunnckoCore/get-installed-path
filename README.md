@@ -15,6 +15,15 @@ npm test
 ## Usage
 > For more use-cases see the [tests](./test.js)
 
+- `<name>` **{String}** name of the package
+- `[local]` **{Boolean}** if true, will check locally (cwd)
+- `[callback]` **{Function}** optional `callback(err, filepath)`
+  + `err` **{Null}** always
+  + `filepath` **{String}** if `name` not installed - **empty string**
+- `return` **{String|Null}** null if `name` not string, **string** otherwise
+
+**Example**
+
 ```js
 var getInstalledPath = require('get-installed-path')
 
@@ -23,6 +32,11 @@ getInstalledPath('npm')
 
 getInstalledPath('detect-installed', true)
 //=> '/home/path/to/cwd/node_modules/detect-installed'
+
+getInstalledPath('abc', true, function (err, fp) {
+  console.log(fp)
+  //=> '/home/path/to/cwd/node_modules/abc'
+})
 ```
 
 

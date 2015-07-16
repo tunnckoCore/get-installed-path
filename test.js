@@ -14,13 +14,11 @@ var endsWith = require('ends-with')
 var getInstalledPath = require('./index')
 
 test('get-installed-path:', function () {
-  test('should throw TypeError if not a string given', function (done) {
-    function fixture () {
-      getInstalledPath([1, 2, 3])
-    }
-
-    test.throws(fixture, /expect `name` be string/)
-    test.throws(fixture, TypeError)
+  test('should return null if not a string given, otherwise return string', function (done) {
+    test.equal(getInstalledPath([1, 2, 3]), null)
+    test.equal(getInstalledPath({foo: 'bar'}), null)
+    test.equal(getInstalledPath('foo bar'), '')
+    test.equal(getInstalledPath('foo'), '')
     done()
   })
   test('should return filepath of globally installed package', function (done) {
@@ -50,5 +48,39 @@ test('get-installed-path:', function () {
 
     test.equal(endsWith(actual, expected), true)
     done()
+  })
+  test('callback api', function () {
+    test('should return filepath of globally installed package', function (done) {
+      var expected = 'node_modules/npm'
+      getInstalledPath('npm', function (err, actual) {
+        test.ifError(err)
+        test.equal(endsWith(actual, expected), true)
+        done()
+      })
+    })
+    test('should return empty string if package is not installed globally', function (done) {
+      var expected = ''
+      getInstalledPath('koa', function (err, actual) {
+        test.ifError(err)
+        test.equal(endsWith(actual, expected), true)
+        done()
+      })
+    })
+    test('should return filepath of locally installed package', function (done) {
+      var expected = 'node_modules/detect-installed'
+      getInstalledPath('detect-installed', true, function (err, actual) {
+        test.ifError(err)
+        test.equal(endsWith(actual, expected), true)
+        done()
+      })
+    })
+    test('should return empty string if package is not installed locally', function (done) {
+      var expected = ''
+      getInstalledPath('koa', true, function (err, actual) {
+        test.ifError(err)
+        test.equal(endsWith(actual, expected), true)
+        done()
+      })
+    })
   })
 })
