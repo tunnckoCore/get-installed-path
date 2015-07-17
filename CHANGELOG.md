@@ -1,5 +1,10 @@
 
 
+## 1.0.3 / 2015-07-17
+- Release v1.0.3 / npm@v1.0.3
+- add callback api, close #2
+- update boilerplate
+
 ## 1.0.2 / 2015-05-06
 - Release v1.0.2 / npm@v1.0.2
 - standard style for the example usage

@@ -1,6 +1,6 @@
 {
   "name": "get-installed-path",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get locally or globally installation path of the given package. Support sync and callback api.",
   "repository": "tunnckoCore/get-installed-path",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
