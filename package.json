@@ -75,12 +75,14 @@
       "list": [
         "always-done",
         "minibase",
-        "try-catch-core"
+        "try-catch-core",
+        "detect-installed",
+        "is-installed",
+        "global-modules",
+        "global-prefix",
+        "global-paths"
       ],
-      "highlight": "always-done"
-    },
-    "lint": {
-      "reflinks": true
+      "highlight": "detect-installed"
     },
     "reflinks": [
       "always-done",
@@ -94,6 +96,14 @@
       "standard-version",
       "verb",
       "verb-generate-readme"
-    ]
+    ],
+    "lint": {
+      "reflinks": true
+    },
+    "relateds": {
+      "hightlight": {
+        "detect-installed": true
+      }
+    }
   }
 }
