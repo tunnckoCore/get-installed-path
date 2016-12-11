@@ -81,6 +81,19 @@
     },
     "lint": {
       "reflinks": true
-    }
+    },
+    "reflinks": [
+      "always-done",
+      "async-done",
+      "base",
+      "charlike",
+      "commitizen",
+      "dezalgo",
+      "global-modules",
+      "once",
+      "standard-version",
+      "verb",
+      "verb-generate-readme"
+    ]
   }
 }
