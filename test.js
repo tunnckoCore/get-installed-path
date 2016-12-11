@@ -16,6 +16,19 @@ const getDir = require('pkg-dir')
 const rimraf = require('rimraf')
 const getInstalledPath = require('./index')
 
+test('async: should return rejected promise if exists but not a directory', (done) => {
+  fs.writeFileSync('./node_modules/foo-j4hbar-quxieiisas', 'xxxyyzzz')
+  getInstalledPath('foo-j4hbar-quxieiisas', {
+    local: true
+  }).catch((err) => {
+    test.strictEqual(/some error occured/.test(err.message), true)
+    test.strictEqual(/Possibly "foo-j4hbar-quxieiisas"/.test(err.message), true)
+    test.strictEqual(/is not a directory/.test(err.message), true)
+    rimraf.sync('./node_modules/foo-j4hbar-quxieiisas')
+    done()
+  })
+})
+
 test('sync: should throw if exists but not a directory', (done) => {
   function fixture () {
     fs.writeFileSync('./node_modules/aaaaa-xxx-x-sasas', 'abc')

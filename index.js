@@ -75,13 +75,20 @@ module.exports = function getInstalledPath (name, opts) {
     }
 
     const filepath = defaults(name, opts)
-    fs.stat(filepath, (err, stats) => {
-      if (err) {
+    fs.stat(filepath, (e, stats) => {
+      if (e) {
         const label = 'get-installed-path:'
         const msg = `${label} module not found "${name}" in path ${filepath}`
         return reject(new Error(msg))
       }
-      resolve(filepath)
+
+      if (stats.isDirectory()) {
+        return resolve(filepath)
+      }
+
+      const msg = `Possibly "${name}" is not a directory: ${filepath}`
+      let err = new Error('get-installed-path: some error occured! ' + msg)
+      reject(err)
     })
   })
 }
