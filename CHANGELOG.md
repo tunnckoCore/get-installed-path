@@ -1,3 +1,24 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/tunnckocore/get-installed-path/compare/v1.0.3...v2.0.0) (2016-12-11)
+
+
+### Chores
+
+* **refactor:** update boilerplate, refactor ([970e833](https://github.com/tunnckocore/get-installed-path/commit/970e833))
+
+
+### BREAKING CHANGES
+
+* refactor: requires node >= 4; drop callback api - now is promise returning; expose .sync
+
+method
+
+
+
 
 
 ## 1.0.3 - 2015-07-17
