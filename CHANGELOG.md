@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/tunnckocore/get-installed-path/compare/v2.0.1...v2.0.2) (2016-12-11)
+
+
+### Bug Fixes
+
+* **err:** fix to return rejected promise if exists but not a directory ([80a2b1e](https://github.com/tunnckocore/get-installed-path/commit/80a2b1e))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/tunnckocore/get-installed-path/compare/v2.0.0...v2.0.1) (2016-12-11)
 
