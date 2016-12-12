@@ -1,6 +1,6 @@
 {
   "name": "get-installed-path",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Get installation path where the given package is installed. Works for globally and locally installed packages. Works on Windows too.",
   "repository": "tunnckoCore/get-installed-path",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)",
