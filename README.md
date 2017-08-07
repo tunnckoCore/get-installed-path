@@ -48,7 +48,7 @@ const getInstalledPath = require('get-installed-path')
 
 ## API
 
-### [getInstalledPath](index.js#L70)
+### [getInstalledPath](index.js#L82)
 > Get installed path of globally or locally `name` package. By default it checks if `name` exists as directory in [global-modules][] directory of the system. Pass `opts.local` to get path of `name` package from local directory or from `opts.cwd`. Returns rejected promise if module not found in global/local `node_modules` folder or if it exist but is not a directory.
 
 **Params**
@@ -97,6 +97,18 @@ getInstalledPath('global-modules', {
   console.log(path)
   // => '~/code/get-installed-path/node_modules/global-modules'
 })
+
+// When searching for the path of a package that is required
+// by several other packages, its path may not be in the
+// closest node_modules. In this case, to search recursively,
+// you can use the following:
+getInstalledPath('npm', {
+  paths: process.mainModule.paths
+}).then((path) => {
+  // ...
+})
+// `process.mainModule` refers to the location of the current
+// entry script.
 ```
 
 ### [.sync](index.js#L120)

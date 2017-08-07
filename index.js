@@ -59,7 +59,7 @@ const modules = require('global-modules')
  *   console.log(path)
  *   // => '~/code/get-installed-path/node_modules/global-modules'
  * })
- * 
+ *
  * // When searching for the path of a package that is required
  * // by several other packages, its path may not be in the
  * // closest node_modules. In this case, to search recursively,
