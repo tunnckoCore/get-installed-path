@@ -111,7 +111,7 @@ getInstalledPath('npm', {
 // entry script.
 ```
 
-### [.sync](index.js#L120)
+### [.sync](index.js#L136)
 > Get installed path of a `name` package synchronous.
 
 **Params**
