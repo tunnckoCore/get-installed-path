@@ -59,6 +59,18 @@ const modules = require('global-modules')
  *   console.log(path)
  *   // => '~/code/get-installed-path/node_modules/global-modules'
  * })
+ * 
+ * // When searching for the path of a package that is required
+ * // by several other packages, its path may not be in the
+ * // closest node_modules. In this case, to search recursively,
+ * // you can use the following:
+ * getInstalledPath('npm', {
+ *  paths: process.mainModule.paths
+ * }).then((path) => {
+ *  // ...
+ * })
+ * // `process.mainModule` refers to the location of the current
+ * // entry script.
  * ```
  *
  * @param  {String} `name` package name
@@ -74,9 +86,12 @@ module.exports = function getInstalledPath (name, opts) {
       return reject(new TypeError(message))
     }
 
-    const filepath = defaults(name, opts)
-    fs.stat(filepath, (e, stats) => {
-      if (e) {
+    const targetPaths = defaults(name, opts)
+    const statPath = filepath => fs.stat(filepath, (e, stats) => {
+      if (e && targetPaths.length > 0) {
+        statPath(targetPaths.shift())
+        return
+      } else if (e) {
         const label = 'get-installed-path:'
         const msg = `${label} module not found "${name}" in path ${filepath}`
         return reject(new Error(msg))
@@ -90,6 +105,7 @@ module.exports = function getInstalledPath (name, opts) {
       let err = new Error('get-installed-path: some error occured! ' + msg)
       reject(err)
     })
+    statPath(targetPaths.shift())
   })
 }
 
@@ -122,23 +138,32 @@ module.exports.sync = function getInstalledPathSync (name, opts) {
     throw new TypeError('get-installed-path: expect `name` to be string')
   }
 
-  const filepath = defaults(name, opts)
-  let stat = null
+  const filePaths = defaults(name, opts)
+  const firstPath = filePaths[0]
+  const modulePath = filePaths.find((filePath) => {
+    let stat = null
 
-  try {
-    stat = fs.statSync(filepath)
-  } catch (e) {
+    try {
+      stat = fs.statSync(filePath)
+    } catch (e) {
+      return false
+    }
+
+    if (stat.isDirectory()) {
+      return true
+    }
+
+    const msg = `Possibly "${name}" is not a directory: ${filePath}`
+    throw new Error('get-installed-path: some error occured! ' + msg)
+  })
+
+  if (!modulePath) {
     const label = 'get-installed-path:'
-    const msg = `${label} module not found "${name}" in path ${filepath}`
+    const msg = `${label} module not found "${name}" in path ${firstPath}`
     throw new Error(msg)
   }
 
-  if (stat.isDirectory()) {
-    return filepath
-  }
-
-  const msg = `Possibly "${name}" is not a directory: ${filepath}`
-  throw new Error('get-installed-path: some error occured! ' + msg)
+  return modulePath
 }
 
 const isValidString = (val) => {
@@ -148,8 +173,10 @@ const isValidString = (val) => {
 const defaults = (name, opts) => {
   opts = opts && typeof opts === 'object' ? opts : {}
   opts.cwd = typeof opts.cwd === 'string' ? opts.cwd : process.cwd()
-
-  return opts.local
-    ? path.join(opts.cwd, 'node_modules', name)
-    : path.join(modules, name)
+  if (opts.paths) {
+    return opts.paths.map((modulePath) => path.join(modulePath, name))
+  } else if (opts.local) {
+    return [ path.join(opts.cwd, 'node_modules', name) ]
+  }
+  return [ path.join(modules, name) ]
 }
