@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/tunnckoCore/get-installed-path/compare/v2.0.3...v2.1.0) (2017-08-22)
+
+
+### Features
+
+* **recursion:** support path recursion via `options.paths` ([#13](https://github.com/tunnckoCore/get-installed-path/issues/13)) ([a70d67f](https://github.com/tunnckoCore/get-installed-path/commit/a70d67f))
+
+
+
 <a name="2.0.3"></a>
 ## [2.0.3](https://github.com/tunnckocore/get-installed-path/compare/v2.0.2...v2.0.3) (2016-12-12)
 
