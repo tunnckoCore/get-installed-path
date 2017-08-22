@@ -10,6 +10,7 @@
 'use strict'
 
 const fs = require('fs')
+const path = require('path')
 const test = require('mukla')
 const mkdirp = require('mkdirp')
 const getDir = require('pkg-dir')
@@ -173,4 +174,41 @@ test('async: should work for #5, not exists locally', () => {
     process.chdir(dirname)
     rimraf.sync('subdir')
   })
+})
+
+test('async: should support recursing directories (#11)', () => {
+  const targetModuleDir = path.resolve(__dirname, './node_modules/target-module')
+  const testModuleDir = path.resolve(__dirname, './node_modules/test-module')
+  mkdirp.sync(targetModuleDir)
+  mkdirp.sync(path.resolve(testModuleDir, './node_modules'))
+  fs.writeFileSync(
+    path.resolve(targetModuleDir, './package.json'),
+    JSON.stringify({ name: 'target-module' })
+  )
+  return getInstalledPath('target-module', {
+    paths: [
+      path.resolve(testModuleDir, './node_modules'),
+      path.resolve(__dirname, './node_modules')
+    ]
+  }).then((fp) => {
+    test.strictEqual(/\/node_modules\/target-module/.test(fp), true)
+  })
+})
+
+test('synchronous: should support recursing directories (#11)', () => {
+  const targetModuleDir = path.resolve(__dirname, './node_modules/target-module')
+  const testModuleDir = path.resolve(__dirname, './node_modules/test-module')
+  mkdirp.sync(targetModuleDir)
+  mkdirp.sync(path.resolve(testModuleDir, './node_modules'))
+  fs.writeFileSync(
+    path.resolve(targetModuleDir, './package.json'),
+    JSON.stringify({ name: 'target-module' })
+  )
+  const filepath = getInstalledPath.sync('target-module', {
+    paths: [
+      path.resolve(testModuleDir, './node_modules'),
+      path.resolve(__dirname, './node_modules')
+    ]
+  })
+  test.strictEqual(/\/node_modules\/target-module/.test(filepath), true)
 })

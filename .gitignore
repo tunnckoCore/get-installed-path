@@ -50,6 +50,8 @@ npm-debug.log
 .directory
 ._*
 lcov.info
+.history
+.vscode
 
 # Runtime data
 pids
