@@ -8,20 +8,18 @@ components
 vendor
 build
 dest
-src
 lib-cov
 coverage
+.nyc_output
 nbproject
 cache
 temp
 tmp
-get-installed-path
 
 # Packages #
 # ##########
 *.7z
 *.dmg
-*.gz
 *.iso
 *.jar
 *.rar
@@ -39,6 +37,9 @@ logs
 *~
 ~*
 
+# Editors
+*.idea
+
 # Another files #
 # ###############
 Icon?
@@ -50,18 +51,13 @@ npm-debug.log
 .directory
 ._*
 lcov.info
-.history
-.vscode
+yarn.lock
 
 # Runtime data
 pids
 *.pid
 *.seed
 *.pid.lock
-
-
-# nyc test coverage
-.nyc_output
 
 # Grunt intermediate storage
 # see here: http://gruntjs.com/creating-plugins#storing-task-files

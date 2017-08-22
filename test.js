@@ -1,17 +1,15 @@
 /*!
  * get-installed-path <https://github.com/tunnckoCore/get-installed-path>
  *
- * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)
+ * Copyright (c) 2017 Charlike Mike Reagent <open.source.charlike@gmail.com> (https://i.am.charlike.online)
  * Released under the MIT license.
  */
-
-/* jshint asi:true */
 
 'use strict'
 
 const fs = require('fs')
 const path = require('path')
-const test = require('mukla')
+const test = require('mukla') // eslint-disable-line
 const mkdirp = require('mkdirp')
 const getDir = require('pkg-dir')
 const rimraf = require('rimraf')

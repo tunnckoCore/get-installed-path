@@ -1,7 +1,7 @@
 /*!
  * get-installed-path <https://github.com/tunnckoCore/get-installed-path>
  *
- * Copyright (c) Charlike Mike Reagent <@tunnckoCore> (http://i.am.charlike.online)
+ * Copyright (c) 2017 Charlike Mike Reagent <open.source.charlike@gmail.com> (https://i.am.charlike.online)
  * Released under the MIT license.
  */
 
