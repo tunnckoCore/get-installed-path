@@ -87,24 +87,25 @@ module.exports = function getInstalledPath (name, opts) {
     }
 
     const targetPaths = defaults(name, opts)
-    const statPath = filepath => fs.stat(filepath, (e, stats) => {
-      if (e && targetPaths.length > 0) {
-        statPath(targetPaths.shift())
-        return
-      } else if (e) {
-        const label = 'get-installed-path:'
-        const msg = `${label} module not found "${name}" in path ${filepath}`
-        return reject(new Error(msg))
-      }
+    const statPath = (filepath) =>
+      fs.stat(filepath, (e, stats) => {
+        if (e && targetPaths.length > 0) {
+          statPath(targetPaths.shift())
+          return
+        } else if (e) {
+          const label = 'get-installed-path:'
+          const msg = `${label} module not found "${name}" in path ${filepath}`
+          return reject(new Error(msg))
+        }
 
-      if (stats.isDirectory()) {
-        return resolve(filepath)
-      }
+        if (stats.isDirectory()) {
+          return resolve(filepath)
+        }
 
-      const msg = `Possibly "${name}" is not a directory: ${filepath}`
-      let err = new Error('get-installed-path: some error occured! ' + msg)
-      reject(err)
-    })
+        const msg = `Possibly "${name}" is not a directory: ${filepath}`
+        let err = new Error('get-installed-path: some error occured! ' + msg)
+        reject(err)
+      })
     statPath(targetPaths.shift())
   })
 }
@@ -166,17 +167,17 @@ module.exports.sync = function getInstalledPathSync (name, opts) {
   return modulePath
 }
 
-const isValidString = (val) => {
+function isValidString (val) {
   return typeof val === 'string' ? val.length > 0 : false
 }
 
-const defaults = (name, opts) => {
+function defaults (name, opts) {
   opts = opts && typeof opts === 'object' ? opts : {}
   opts.cwd = typeof opts.cwd === 'string' ? opts.cwd : process.cwd()
   if (opts.paths) {
     return opts.paths.map((modulePath) => path.join(modulePath, name))
   } else if (opts.local) {
-    return [ path.join(opts.cwd, 'node_modules', name) ]
+    return [path.join(opts.cwd, 'node_modules', name)]
   }
-  return [ path.join(modules, name) ]
+  return [path.join(modules, name)]
 }

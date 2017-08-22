@@ -8,7 +8,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "standard --verbose",
+    "lint": "eslint *.js --format codeframe --fix",
     "pretest": "npm run lint",
     "test": "npm run coverage",
     "posttest": "npm run lint:coverage",
@@ -25,13 +25,14 @@
   "devDependencies": {
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
+    "eslint": "4.5.0",
+    "eslint-config-standard-tunnckocore": "1.0.6",
     "mkdirp": "^0.5.1",
     "mukla": "^0.4.8",
     "nyc": "^10.0.0",
     "pkg-dir": "^1.0.0",
     "pre-commit": "^1.2.0",
     "rimraf": "^2.5.4",
-    "standard": "^8.6.0",
     "standard-version": "^4.0.0"
   },
   "files": [
