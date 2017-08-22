@@ -5,24 +5,22 @@
   "repository": "tunnckoCore/get-installed-path",
   "homepage": "https://github.com/tunnckoCore/get-installed-path",
   "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
-  "nspId": "changeme",
-  "module": "changeme",
+  "nspId": "fd91a3c7-498b-4ff8-8f29-5d93a9d97626",
   "main": "./index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.js --format codeframe --fix",
-    "pretest": "npm run lint",
-    "test": "npm run coverage",
-    "posttest": "npm run lint:coverage",
-    "coverage": "nyc --reporter lcov node test.js && nyc report",
-    "lint:coverage": "nyc check-coverage",
-    "prerelease": "npm test",
-    "release": "standard-version --sign --no-verify",
-    "precommit": "git add --all",
-    "commit": "git-cz"
+    "fresh": "hela fresh",
+    "contrib": "hela contrib",
+    "renovate": "hela renovate",
+    "lint": "hela lint -c .eslintrc.json",
+    "test": "hela test node test.js",
+    "precommit": "hela precommit",
+    "commit": "hela commit",
+    "postcommit": "git push",
+    "semantic-release": "hela release"
   },
   "engines": {
-    "node": ">=4",
+    "node": ">=6",
     "npm": ">=5"
   },
   "files": [
@@ -32,17 +30,14 @@
     "global-modules": "1.0.0"
   },
   "devDependencies": {
-    "commitizen": "2.9.6",
-    "cz-conventional-changelog": "2.0.0",
     "eslint": "4.5.0",
     "eslint-config-standard-tunnckocore": "1.0.7",
-    "mkdirp": "^0.5.1",
-    "mukla": "0.4.9",
-    "nyc": "10.0.0",
+    "hela": "0.6.0",
+    "husky": "0.14.3",
+    "mkdirp": "0.5.1",
     "pkg-dir": "2.0.0",
-    "pre-commit": "1.2.2",
     "rimraf": "2.6.1",
-    "standard-version": "4.2.0"
+    "semantic-release": "^7.0.2"
   },
   "keywords": [
     "filepath",
@@ -59,11 +54,6 @@
     "pkg",
     "resolve"
   ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "verb": {
     "run": true,
     "toc": {
@@ -90,7 +80,15 @@
     },
     "lint": {
       "reflinks": true
-    }
+    },
+    "reflinks": [
+      "always-done",
+      "async-done",
+      "base",
+      "charlike-cli",
+      "dezalgo",
+      "once"
+    ]
   },
   "release": {
     "analyzeCommits": "simple-commit-message"
