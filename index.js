@@ -19,9 +19,7 @@ const modules = require('global-modules')
  * promise if module not found in global/local `node_modules` folder or
  * if it exist but is not a directory.
  *
- * **Example**
- *
- * ```js
+ * @example
  * const getInstalledPath = require('get-installed-path')
  *
  * getInstalledPath('npm').then((path) => {
@@ -71,14 +69,13 @@ const modules = require('global-modules')
  * })
  * // `process.mainModule` refers to the location of the current
  * // entry script.
- * ```
  *
- * @param  {String} `name` package name
- * @param  {Object} `opts` pass `opts.local` to check locally
+ * @param  {string} name package name
+ * @param  {Object} opts pass `opts.local` to check locally
  * @return {Promise} rejected promise if `name` not a string or is empty string
- * @api public
+ * @name   getInstalledPath
+ * @public
  */
-
 module.exports = function getInstalledPath (name, opts) {
   return new Promise((resolve, reject) => {
     if (!isValidString(name)) {
@@ -112,10 +109,10 @@ module.exports = function getInstalledPath (name, opts) {
 
 /**
  * > Get installed path of a `name` package synchronous.
+ * Returns `boolean` when `paths` option is used and filepath is directory,
+ * otherwise returns a full filepath OR throws error.
  *
- * **Example**
- *
- * ```js
+ * @example
  * const getInstalledPath = require('get-installed-path')
  *
  * const npmPath = getInstalledPath.sync('npm')
@@ -125,15 +122,13 @@ module.exports = function getInstalledPath (name, opts) {
  * const gmPath = getInstalledPath.sync('global-modules', { local: true })
  * console.log(gmPath)
  * // => '~/code/get-installed-path/node_modules/global-modules'
- * ```
  *
+ * @param  {string} name package name
+ * @param  {Object} opts pass `opts.local` to check locally
+ * @return {string} The full filepath or throw `TypeError` if `name` not a string or is empty string
  * @name   .sync
- * @param  {String} `name` package name
- * @param  {Object} `opts` pass `opts.local` to check locally
- * @return {Boolean} or throw `TypeError` if `name` not a string or is empty string
- * @api public
+ * @public
  */
-
 module.exports.sync = function getInstalledPathSync (name, opts) {
   if (!isValidString(name)) {
     throw new TypeError('get-installed-path: expect `name` to be string')
