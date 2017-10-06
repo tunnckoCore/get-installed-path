@@ -117,7 +117,7 @@ function getInstalledPath (name, opts) {
  * @param  {string} name package name
  * @param  {Object} opts pass `opts.local` to check locally
  * @return {string} The full filepath or throw `TypeError` if `name` not a string or is empty string
- * @name   getInstalledPathSync
+ * @name   .sync
  * @public
  */
 function getInstalledPathSync (name, opts) {
