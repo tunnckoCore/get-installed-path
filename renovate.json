@@ -3,7 +3,7 @@
     ":base",
     ":automergePr",
     ":automergeMinor",
-    ":preserveSemverRanges"
+    ":prNotPending"
   ],
   "labels": [
     "deps",
@@ -15,7 +15,7 @@
   "ignoreDeps": [
     "semantic-release"
   ],
-  "pinVersions": false,
+  "pinVersions": true,
   "rebaseStalePrs": true,
   "semanticCommits": true
 }
