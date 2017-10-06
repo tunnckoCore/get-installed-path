@@ -1,15 +1,6 @@
-/*!
- * get-installed-path <https://github.com/tunnckoCore/get-installed-path>
- *
- * Copyright (c) 2017 Charlike Mike Reagent <open.source.charlike@gmail.com> (https://i.am.charlike.online)
- * Released under the MIT license.
- */
-
-'use strict'
-
-const fs = require('fs')
-const path = require('path')
-const modules = require('global-modules')
+import fs from 'fs'
+import path from 'path'
+import modules from 'global-modules'
 
 /**
  * > Get installed path of globally or locally `name` package.
@@ -76,7 +67,7 @@ const modules = require('global-modules')
  * @name   getInstalledPath
  * @public
  */
-module.exports = function getInstalledPath (name, opts) {
+function getInstalledPath (name, opts) {
   return new Promise((resolve, reject) => {
     if (!isValidString(name)) {
       const message = 'get-installed-path: expect `name` to be string'
@@ -126,10 +117,10 @@ module.exports = function getInstalledPath (name, opts) {
  * @param  {string} name package name
  * @param  {Object} opts pass `opts.local` to check locally
  * @return {string} The full filepath or throw `TypeError` if `name` not a string or is empty string
- * @name   .sync
+ * @name   getInstalledPathSync
  * @public
  */
-module.exports.sync = function getInstalledPathSync (name, opts) {
+function getInstalledPathSync (name, opts) {
   if (!isValidString(name)) {
     throw new TypeError('get-installed-path: expect `name` to be string')
   }
@@ -176,3 +167,7 @@ function defaults (name, opts) {
   }
   return [path.join(modules, name)]
 }
+
+getInstalledPath.sync = getInstalledPathSync
+
+export default getInstalledPath

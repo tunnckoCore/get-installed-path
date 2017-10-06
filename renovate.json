@@ -1,39 +1,21 @@
 {
-  "enabled": true,
-  "pinVersions": true,
-  "rebaseStalePrs": true,
-  "semanticCommits": true,
-  "unpublishSafe": false,
+  "extends": [
+    ":base",
+    ":automergePr",
+    ":automergeMinor",
+    ":preserveSemverRanges"
+  ],
   "labels": [
     "deps",
     "renovate"
   ],
-  "prCreation": "not-pending",
-  "depTypes": [
-    {
-      "depType": "dependencies",
-      "semanticPrefix": "fix(deps): ",
-      "automerge": "minor",
-      "automergeType": "branch-push",
-      "assignees": [
-        "charlike"
-      ]
-    },
-    {
-      "depType": "devDependencies",
-      "semanticPrefix": "chore(devDeps): ",
-      "automerge": "any",
-      "automergeType": "branch-push"
-    }
+  "assignees": [
+    "charlike"
   ],
-  "packageRules": [
-    {
-      "packageNames": [
-        "semantic-release"
-      ],
-      "automerge": "minor",
-      "automergeType": "pr",
-      "pinVersions": false
-    }
-  ]
+  "ignoreDeps": [
+    "semantic-release"
+  ],
+  "pinVersions": false,
+  "rebaseStalePrs": true,
+  "semanticCommits": true
 }
