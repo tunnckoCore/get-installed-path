@@ -27,7 +27,7 @@ You may also read the [Contributing Guide](./CONTRIBUTING.md). There, beside _"H
 - [Install](#install)
 - [API](#api)
   * [getInstalledPath](#getinstalledpath)
-  * [.sync](#sync)
+  * [getInstalledPathSync](#getinstalledpathsync)
 - [Related](#related)
 - [Contributing](#contributing)
 - [Author](#author)
@@ -64,7 +64,7 @@ if it exist but is not a directory.
 **Example**
 
 ```jsx
-const getInstalledPath = require('get-installed-path')
+const { getInstalledPath } = require('get-installed-path')
 
 getInstalledPath('npm').then((path) => {
   console.log(path)
@@ -115,7 +115,7 @@ getInstalledPath('npm', {
 // entry script.
 ```
 
-### [.sync](src/index.js#L124)
+### [getInstalledPathSync](src/index.js#L124)
 
 > Get installed path of a `name` package synchronous.
 Returns `boolean` when `paths` option is used and filepath is directory,
@@ -130,13 +130,13 @@ otherwise returns a full filepath OR throws error.
 **Example**
 
 ```jsx
-const getInstalledPath = require('get-installed-path')
+const { getInstalledPathSync } = require('get-installed-path')
 
-const npmPath = getInstalledPath.sync('npm')
+const npmPath = getInstalledPathSync('npm')
 console.log(npmPath)
 // => '/home/charlike/.nvm/path/to/lib/node_modules/npm'
 
-const gmPath = getInstalledPath.sync('global-modules', { local: true })
+const gmPath = getInstalledPathSync('global-modules', { local: true })
 console.log(gmPath)
 // => '~/code/get-installed-path/node_modules/global-modules'
 ```

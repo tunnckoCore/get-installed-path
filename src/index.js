@@ -11,7 +11,7 @@ import modules from 'global-modules'
  * if it exist but is not a directory.
  *
  * @example
- * const getInstalledPath = require('get-installed-path')
+ * const { getInstalledPath } = require('get-installed-path')
  *
  * getInstalledPath('npm').then((path) => {
  *   console.log(path)
@@ -104,13 +104,13 @@ function getInstalledPath (name, opts) {
  * otherwise returns a full filepath OR throws error.
  *
  * @example
- * const getInstalledPath = require('get-installed-path')
+ * const { getInstalledPathSync } = require('get-installed-path')
  *
- * const npmPath = getInstalledPath.sync('npm')
+ * const npmPath = getInstalledPathSync('npm')
  * console.log(npmPath)
  * // => '/home/charlike/.nvm/path/to/lib/node_modules/npm'
  *
- * const gmPath = getInstalledPath.sync('global-modules', { local: true })
+ * const gmPath = getInstalledPathSync('global-modules', { local: true })
  * console.log(gmPath)
  * // => '~/code/get-installed-path/node_modules/global-modules'
  *
