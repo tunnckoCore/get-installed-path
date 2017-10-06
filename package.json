@@ -12,7 +12,7 @@
   "scripts": {
     "start": "hela",
     "test": "yarn start test",
-    "posttest": "rimraf dist/node_modules",
+    "posttest": "rimraf dist/node_modules && rimraf dist/test.js",
     "precommit": "yarn start precommit",
     "commit": "yarn start commit"
   },
