@@ -17,6 +17,7 @@
     "commit": "yarn start commit"
   },
   "license": "MIT",
+  "licenseStart": 2016,
   "engines": {
     "node": ">=6",
     "npm": ">=5",
@@ -37,7 +38,7 @@
     "mukla": "0.4.9",
     "pkg-dir": "2.0.0",
     "rimraf": "2.6.2",
-    "semantic-release": "^7.0.2"
+    "semantic-release": "7.0.2"
   },
   "keywords": [
     "filepath",
