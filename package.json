@@ -88,7 +88,9 @@
       "base",
       "charlike-cli",
       "dezalgo",
-      "once"
+      "once",
+      "global-modules",
+      "hela"
     ]
   },
   "release": {
