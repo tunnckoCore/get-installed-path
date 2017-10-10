@@ -25,10 +25,6 @@ You may also read the [Contributing Guide](./CONTRIBUTING.md). There, beside _"H
 [![semantic release][semantic-release-img]][semantic-release-url] 
 [![Node Version Required][nodeversion-img]][nodeversion-url]
 
-<a target="_blank" rel="nofollow" href="https://app.codesponsor.io/link/K7yYzzA5nb2ZDR4GTKmgUdfe/tunnckoCore/get-installed-path">
-  <img alt="Sponsor" width="888" height="68" src="https://app.codesponsor.io/embed/K7yYzzA5nb2ZDR4GTKmgUdfe/tunnckoCore/get-installed-path.svg" />
-</a>
-
 ## Table of Contents
 - [Install](#install)
 - [API](#api)
@@ -49,7 +45,9 @@ This project requires [**Node.js**][nodeversion-url] **v6** and above. Use [**ya
 $ yarn add get-installed-path
 ```
 
-**[back to top](#thetop)**
+<a target="_blank" rel="nofollow" href="https://app.codesponsor.io/link/K7yYzzA5nb2ZDR4GTKmgUdfe/tunnckoCore/get-installed-path">
+  <img alt="Sponsor" width="888" height="68" src="https://app.codesponsor.io/embed/K7yYzzA5nb2ZDR4GTKmgUdfe/tunnckoCore/get-installed-path.svg" />
+</a>
 
 ## API
 Review carefully the provided examples and the working [tests](./test/index.js).
