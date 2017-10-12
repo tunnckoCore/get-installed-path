@@ -2370,9 +2370,9 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-hela-config-tunnckocore@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-1.0.0.tgz#52f85432e8b3f3892e41101de6c827e0e8d0b0cb"
+hela-config-tunnckocore@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-1.0.1.tgz#3beba0a07e649d5072d48dd28b096d3024775e72"
   dependencies:
     babel-core "^7.0.0-beta.2"
     babel-eslint "^8.0.1"
