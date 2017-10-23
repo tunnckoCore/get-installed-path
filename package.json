@@ -5,7 +5,7 @@
   "repository": "tunnckoCore/get-installed-path",
   "homepage": "https://github.com/tunnckoCore/get-installed-path",
   "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
-  "nspId": "fd91a3c7-498b-4ff8-8f29-5d93a9d97626",
+  "nspId": "976d071f-5f2e-4ca6-9583-8c2b9dbf6e76",
   "src": "./src/**/*.js",
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
