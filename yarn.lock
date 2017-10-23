@@ -2478,9 +2478,9 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-hela-config-tunnckocore@1.3.7:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-1.3.7.tgz#7d10b4251eaf765dfd2a83733a91d010180c153b"
+hela-config-tunnckocore@1.3.8:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-1.3.8.tgz#be2a612d19b1a18a08791a6153b6413acefbc615"
   dependencies:
     "@std/esm" "0.12.1"
     all-contributors-cli "4.5.1"
