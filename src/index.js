@@ -67,7 +67,7 @@ import modules from 'global-modules'
  * @name   getInstalledPath
  * @public
  */
-function getInstalledPath (name, opts) {
+function getInstalledPath(name, opts) {
   return new Promise((resolve, reject) => {
     if (!isValidString(name)) {
       const message = 'get-installed-path: expect `name` to be string'
@@ -75,7 +75,7 @@ function getInstalledPath (name, opts) {
     }
 
     const targetPaths = defaults(name, opts)
-    const statPath = (filepath) =>
+    const statPath = filepath =>
       fs.stat(filepath, (e, stats) => {
         if (e && targetPaths.length > 0) {
           statPath(targetPaths.shift())
@@ -120,14 +120,14 @@ function getInstalledPath (name, opts) {
  * @name   getInstalledPathSync
  * @public
  */
-function getInstalledPathSync (name, opts) {
+function getInstalledPathSync(name, opts) {
   if (!isValidString(name)) {
     throw new TypeError('get-installed-path: expect `name` to be string')
   }
 
   const filePaths = defaults(name, opts)
   const firstPath = filePaths[0]
-  const modulePath = filePaths.find((filePath) => {
+  const modulePath = filePaths.find(filePath => {
     let stat = null
 
     try {
@@ -153,15 +153,15 @@ function getInstalledPathSync (name, opts) {
   return modulePath
 }
 
-function isValidString (val) {
+function isValidString(val) {
   return typeof val === 'string' ? val.length > 0 : false
 }
 
-function defaults (name, opts) {
+function defaults(name, opts) {
   opts = opts && typeof opts === 'object' ? opts : {}
   opts.cwd = typeof opts.cwd === 'string' ? opts.cwd : process.cwd()
   if (opts.paths) {
-    return opts.paths.map((modulePath) => path.join(modulePath, name))
+    return opts.paths.map(modulePath => path.join(modulePath, name))
   } else if (opts.local) {
     return [path.join(opts.cwd, 'node_modules', name)]
   }
