@@ -20,7 +20,7 @@ test('async: return rejected promise if exists but not a directory', async () =>
 
   try {
     await getInstalledPath('foo-j4hbar-quxieiisas', {
-      local: true,
+      local: true
     })
   } catch (err) {
     test.strictEqual(/some error occured/.test(err.message), true)
@@ -30,8 +30,8 @@ test('async: return rejected promise if exists but not a directory', async () =>
   }
 })
 
-test('sync: should throw if exists but not a directory', (done) => {
-  function fixture () {
+test('sync: should throw if exists but not a directory', done => {
+  function fixture() {
     fs.writeFileSync('./node_modules/aaaaa-xxx-x-sasas', 'abc')
     getInstalledPathSync('aaaaa-xxx-x-sasas', { local: true })
   }
@@ -73,7 +73,7 @@ test('async: should return Error if not exists glboally', async () => {
 
 test('async: should return absolute path if exists locally', async () => {
   const fp = await getInstalledPath('global-modules', {
-    local: true,
+    local: true
   })
 
   test.strictEqual(/get-installed-path/.test(fp), true)
@@ -84,7 +84,7 @@ test('async: should return absolute path if exists locally', async () => {
 test('async: should return Error if not exists locally', async () => {
   try {
     await getInstalledPath('sdfjkhskh3-sf9sd78fsdf', {
-      local: true,
+      local: true
     })
   } catch (err) {
     test.strictEqual(/module not found/.test(err.message), true)
@@ -98,8 +98,8 @@ test('async: should return Error if not exists locally', async () => {
  * testing synchronous mode
  */
 
-test('sync: throw TypeError when invalid `name` is passed', (done) => {
-  function fixture () {
+test('sync: throw TypeError when invalid `name` is passed', done => {
+  function fixture() {
     getInstalledPathSync(1234)
   }
 
@@ -108,7 +108,7 @@ test('sync: throw TypeError when invalid `name` is passed', (done) => {
   done()
 })
 
-test('synchronous: should return absolute path if exists globally', (done) => {
+test('synchronous: should return absolute path if exists globally', done => {
   const fp = getInstalledPathSync('npm')
 
   test.strictEqual(/node_modules/.test(fp), true)
@@ -116,8 +116,8 @@ test('synchronous: should return absolute path if exists globally', (done) => {
   done()
 })
 
-test('synchronous: should throw Error if not exists globally', (done) => {
-  function fixture () {
+test('synchronous: should throw Error if not exists globally', done => {
+  function fixture() {
     getInstalledPathSync('foo-bar-bqwewrwevdfg-sa')
   }
 
@@ -128,9 +128,9 @@ test('synchronous: should throw Error if not exists globally', (done) => {
   done()
 })
 
-test('synchronous: should return absolute path if exists locally', (done) => {
+test('synchronous: should return absolute path if exists locally', done => {
   const filepath = getInstalledPathSync('global-modules', {
-    local: true,
+    local: true
   })
   test.strictEqual(/get-installed-path/.test(filepath), true)
   test.strictEqual(/node_modules/.test(filepath), true)
@@ -138,10 +138,10 @@ test('synchronous: should return absolute path if exists locally', (done) => {
   done()
 })
 
-test('synchronous: should throw Error if not exists locally', (done) => {
-  function fixture () {
+test('synchronous: should throw Error if not exists locally', done => {
+  function fixture() {
     getInstalledPathSync('sdfjkhskh3-sf9sd78fsdf', {
-      local: true,
+      local: true
     })
   }
 
@@ -151,14 +151,14 @@ test('synchronous: should throw Error if not exists locally', (done) => {
   done()
 })
 
-test('sync: should work for subdirs (issue #5), exists locally', (done) => {
+test('sync: should work for subdirs (issue #5), exists locally', done => {
   const dirname = __dirname
   mkdirp.sync('barrr')
   process.chdir('barrr')
 
   const filepath = getInstalledPathSync('global-modules', {
     cwd: getDir.sync(),
-    local: true,
+    local: true
   })
 
   test.strictEqual(/node_modules/.test(filepath), true)
@@ -177,7 +177,7 @@ test('async: should work for #5, not exists locally', async () => {
   try {
     await getInstalledPath('npm', {
       cwd: getDir.sync(),
-      local: true,
+      local: true
     })
   } catch (err) {
     test.strictEqual(/module not found "npm" in path/.test(err.message), true)
@@ -205,8 +205,8 @@ test('async: should support recursing directories (#11)', async () => {
   const fp = await getInstalledPath('target-module', {
     paths: [
       path.resolve(testModuleDir, './node_modules'),
-      path.resolve(__dirname, './node_modules'),
-    ],
+      path.resolve(__dirname, './node_modules')
+    ]
   })
 
   test.strictEqual(/\/node_modules\/target-module/.test(fp), true)
@@ -230,8 +230,8 @@ test('synchronous: should support recursing directories (#11)', () => {
   const filepath = getInstalledPathSync('target-module', {
     paths: [
       path.resolve(testModuleDir, './node_modules'),
-      path.resolve(__dirname, './node_modules'),
-    ],
+      path.resolve(__dirname, './node_modules')
+    ]
   })
 
   test.strictEqual(/\/node_modules\/target-module/.test(filepath), true)
