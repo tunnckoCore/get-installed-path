@@ -148,6 +148,10 @@
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.12.1.tgz#d07b7c5e2701beade1e7db74b95484f5d91c46bf"
 
+"@std/esm@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.20.0.tgz#658cb32e3b163f20b7d9f29a78987041068b1182"
+
 "@tunnckocore/pretty-config@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@tunnckocore/pretty-config/-/pretty-config-0.2.2.tgz#19cba311b6d9ebc536947acf7e8544368870c612"
@@ -156,6 +160,15 @@
     isobject "3.0.1"
     js-yaml "3.10.0"
     pify "3.0.0"
+
+"@tunnckocore/pretty-config@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@tunnckocore/pretty-config/-/pretty-config-0.5.1.tgz#e8cc45cf28ec5c74245f857ae317955d483a2879"
+  dependencies:
+    "@std/esm" "^0.20.0"
+    js-yaml "^3.10.0"
+    json-6 "^0.1.128"
+    pify "^3.0.0"
 
 JSONStream@^1.0.4:
   version "1.3.2"
@@ -2060,16 +2073,28 @@ event-stream@^3.3.0:
     stream-combiner "~0.0.4"
     through "~2.3.1"
 
-execa-pro@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/execa-pro/-/execa-pro-1.0.2.tgz#7450a3ca7ece202bcb12ac0ee5e09bd8a0420746"
+execa-pro@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/execa-pro/-/execa-pro-1.0.3.tgz#903301a5e0b55e05b6ddef0792cfedae2ff6df58"
   dependencies:
-    execa "0.8.0"
+    execa "0.9.0"
     p-map-series "1.0.0"
 
 execa@0.8.0, execa@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-0.8.0.tgz#d8d76bbc1b55217ed190fd6dd49d3c774ecfc8da"
+  dependencies:
+    cross-spawn "^5.0.1"
+    get-stream "^3.0.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
+
+execa@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-0.9.0.tgz#adb7ce62cf985071f60580deb4a88b9e34712d01"
   dependencies:
     cross-spawn "^5.0.1"
     get-stream "^3.0.0"
@@ -2719,13 +2744,13 @@ hela@1.3.12:
     p-map-series "1.0.0"
     resolve-plugins-sync "1.1.4"
 
-hela@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/hela/-/hela-2.0.6.tgz#5f4b3415c08bc11770822fb89864ac3e0090f747"
+hela@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hela/-/hela-2.0.8.tgz#0503a6352715bb0eccea0d4f5239e3a1b4cddef6"
   dependencies:
-    "@tunnckocore/pretty-config" "0.2.2"
+    "@tunnckocore/pretty-config" "0.5.1"
     arrayify "1.0.0"
-    execa-pro "1.0.2"
+    execa-pro "1.0.3"
     mri "1.1.0"
     resolve-plugins-sync "1.1.4"
 
@@ -3195,7 +3220,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@3.10.0, js-yaml@^3.9.1:
+js-yaml@3.10.0, js-yaml@^3.10.0, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
@@ -3217,6 +3242,10 @@ jsesc@^2.5.1:
 jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
+
+json-6@^0.1.128:
+  version "0.1.128"
+  resolved "https://registry.yarnpkg.com/json-6/-/json-6-0.1.128.tgz#0c52ddf38af9bd2d8ca5fdb402fc0e70776ccbf2"
 
 json-buffer@3.0.0:
   version "3.0.0"
