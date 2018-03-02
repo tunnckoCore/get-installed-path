@@ -1819,9 +1819,9 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-hela-config-tunnckocore@3.0.16:
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-3.0.16.tgz#39724d650906337dad4001c44fd89a6ba7f1adcc"
+hela-config-tunnckocore@3.0.18:
+  version "3.0.18"
+  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-3.0.18.tgz#33b2d11e7eac66508672d33679d1f9ff3dcfe0bc"
   dependencies:
     "@tunnckocore/pretty-config" "^0.5.1"
     builtin-modules "^2.0.0"
