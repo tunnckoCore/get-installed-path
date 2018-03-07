@@ -324,12 +324,6 @@ asap@^2.0.0, asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
-asky@0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/asky/-/asky-0.2.2.tgz#f3faa91ce4b34354a3ce2a954d18062302a07333"
-  dependencies:
-    p-map-series "1.0.0"
-
 asn1@~0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/asn1/-/asn1-0.2.3.tgz#dac8787713c9966849fc8180777ebe9c1ddf3b86"
@@ -653,6 +647,10 @@ cliui@^4.0.0:
     string-width "^2.1.1"
     strip-ansi "^4.0.0"
     wrap-ansi "^2.0.0"
+
+clorox@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/clorox/-/clorox-1.0.3.tgz#6fa63653f280c33d69f548fb14d239ddcfa1590d"
 
 co@^4.6.0:
   version "4.6.0"
@@ -1662,12 +1660,13 @@ git-url-parse@^8.0.0:
   dependencies:
     git-up "^2.0.0"
 
-gitcommit@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/gitcommit/-/gitcommit-0.2.4.tgz#39a23e1f58b8ffb1602a5c5f65570b93418785ee"
+gitcommit@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gitcommit/-/gitcommit-1.0.0.tgz#9e632e26ae186bf98401520d4786074935b3cda2"
   dependencies:
-    asky "0.2.2"
-    execa "0.8.0"
+    execa "^0.9.0"
+    mri "^1.1.0"
+    prompts terkelg/prompts
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -1819,15 +1818,15 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-hela-config-tunnckocore@3.0.19:
-  version "3.0.19"
-  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-3.0.19.tgz#e40730dcb0d714926443573f9f6f5dd78bd16d83"
+hela-config-tunnckocore@3.0.20:
+  version "3.0.20"
+  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-3.0.20.tgz#2bdeb7cd4b7259ff1b17ff1d5e1841d5a13da7d4"
   dependencies:
     "@tunnckocore/pretty-config" "^0.5.1"
     builtin-modules "^2.0.0"
     eslint "^4.17.0"
     eslint-config-tunnckocore "^1.0.1"
-    gitcommit "^0.2.4"
+    gitcommit "^1.0.0"
     is-ci "^1.1.0"
     isobject "^3.0.1"
     loud-rejection "^1.6.0"
@@ -2606,7 +2605,7 @@ modify-values@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.0.tgz#e2b6cdeb9ce19f99317a53722f3dbf5df5eaaab2"
 
-mri@1.1.0:
+mri@1.1.0, mri@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.0.tgz#5c0a3f29c8ccffbbb1ec941dcec09d71fa32f36a"
 
@@ -3087,6 +3086,13 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+"prompts@github:terkelg/prompts":
+  version "0.1.4"
+  resolved "https://codeload.github.com/terkelg/prompts/tar.gz/964eb23a83870cb4ae60fb88751e61d376f90176"
+  dependencies:
+    clorox "^1.0.1"
+    sisteransi "^0.1.0"
+
 prop-types@^15.5.10, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
@@ -3481,6 +3487,10 @@ shebang-regex@^1.0.0:
 signal-exit@^3.0.0, signal-exit@^3.0.1, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+sisteransi@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-0.1.0.tgz#2e6706ac427019b84e60f751d588d87920484f25"
 
 slash@^1.0.0:
   version "1.0.0"
