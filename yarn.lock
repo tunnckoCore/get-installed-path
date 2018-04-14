@@ -1770,9 +1770,9 @@ git-url-parse@^8.0.0:
   dependencies:
     git-up "^2.0.0"
 
-git-url-parse@^8.3.1:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/git-url-parse/-/git-url-parse-8.3.1.tgz#9d7d762993dc498aab16937c844e11afe3748817"
+git-url-parse@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/git-url-parse/-/git-url-parse-9.0.0.tgz#a82a36acc3544c77ed0984d6488b37fbcfbec24d"
   dependencies:
     git-up "^2.0.0"
     parse-domain "^2.0.0"
@@ -3693,9 +3693,9 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-semantic-release@15.1.5:
-  version "15.1.5"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.1.5.tgz#e97c2fa1defe6f65cd22d10f3ec2c242dc0e5632"
+semantic-release@15.1.7:
+  version "15.1.7"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.1.7.tgz#b29eef1b9443f75addab7c2e353338b72b9b628d"
   dependencies:
     "@semantic-release/commit-analyzer" "^5.0.0"
     "@semantic-release/error" "^2.2.0"
@@ -3710,7 +3710,7 @@ semantic-release@15.1.5:
     execa "^0.10.0"
     get-stream "^3.0.0"
     git-log-parser "^1.2.0"
-    git-url-parse "^8.3.1"
+    git-url-parse "^9.0.0"
     hook-std "^0.4.0"
     hosted-git-info "^2.6.0"
     lodash "^4.17.4"
