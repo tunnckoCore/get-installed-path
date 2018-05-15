@@ -147,9 +147,9 @@
     json-6 "^0.1.128"
     pify "^3.0.0"
 
-"@types/estree@0.0.38":
-  version "0.0.38"
-  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.38.tgz#c1be40aa933723c608820a99a373a16d215a1ca2"
+"@types/estree@0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
 
 "@types/node@*":
   version "9.6.5"
@@ -1931,9 +1931,9 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.0.2"
 
-hela-config-tunnckocore@3.0.22:
-  version "3.0.22"
-  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-3.0.22.tgz#784ca6beac80430d8ab4cc415e0fb1e00bfa7dd3"
+hela-config-tunnckocore@3.0.23:
+  version "3.0.23"
+  resolved "https://registry.yarnpkg.com/hela-config-tunnckocore/-/hela-config-tunnckocore-3.0.23.tgz#9f1bf78357c007189903bdd1bff0232bb5ebcc4a"
   dependencies:
     "@tunnckocore/pretty-config" "^0.5.1"
     builtin-modules "^2.0.0"
@@ -1948,7 +1948,7 @@ hela-config-tunnckocore@3.0.22:
     p-is-promise "^1.1.0"
     p-map "^1.2.0"
     pify "^3.0.0"
-    rollup "^0.58.0"
+    rollup "^0.59.0"
     rollup-plugin-commonjs "^9.0.0"
     time-stamp "^2.0.0"
 
@@ -3597,11 +3597,11 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@^0.58.0:
-  version "0.58.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.58.0.tgz#6a3a51f90916ae703d0dc807a5652799ca0ccfc2"
+rollup@^0.59.0:
+  version "0.59.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.59.0.tgz#f91a59ae655f1d2ee9fd795d85621eea3dee21ff"
   dependencies:
-    "@types/estree" "0.0.38"
+    "@types/estree" "0.0.39"
     "@types/node" "*"
 
 run-async@^2.2.0:
