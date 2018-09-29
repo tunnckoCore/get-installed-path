@@ -200,11 +200,11 @@ Project scaffolded and managed with [hela][].
 [npmv-url]: https://www.npmjs.com/package/get-installed-path
 [npmv-img]: https://img.shields.io/npm/v/get-installed-path.svg?label=npm%20version
 
-[open-issue-url]: https://github.com/tunnckoCore/get-installed-path/issues/new
-[github-release-url]: https://github.com/tunnckoCore/get-installed-path/releases/latest
-[github-release-img]: https://img.shields.io/github/release/tunnckoCore/get-installed-path.svg?label=github%20release
+[open-issue-url]: https://github.com/tunnckoCoreLabs/get-installed-path/issues/new
+[github-release-url]: https://github.com/tunnckoCoreLabs/get-installed-path/releases/latest
+[github-release-img]: https://img.shields.io/github/release/tunnckoCoreLabs/get-installed-path.svg?label=github%20release
 
-[license-url]: https://github.com/tunnckoCore/get-installed-path/blob/master/LICENSE
+[license-url]: https://github.com/tunnckoCoreLabs/get-installed-path/blob/master/LICENSE
 [license-img]: https://img.shields.io/npm/l/get-installed-path.svg
 
 [downloads-weekly-img]: https://img.shields.io/npm/dw/get-installed-path.svg
@@ -212,20 +212,20 @@ Project scaffolded and managed with [hela][].
 [downloads-total-img]: https://img.shields.io/npm/dt/get-installed-path.svg
 
 <!-- Front line badges -->
-[codeclimate-url]: https://codeclimate.com/github/tunnckoCore/get-installed-path
-[codeclimate-img]: https://img.shields.io/codeclimate/github/tunnckoCore/get-installed-path.svg
+[codeclimate-url]: https://codeclimate.com/github/tunnckoCoreLabs/get-installed-path
+[codeclimate-img]: https://img.shields.io/codeclimate/github/tunnckoCoreLabs/get-installed-path.svg
 
 [standard-url]: https://github.com/standard/standard
 [standard-img]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 
-[travis-url]: https://travis-ci.org/tunnckoCore/get-installed-path
-[travis-img]: https://img.shields.io/travis/tunnckoCore/get-installed-path/master.svg?label=linux
+[travis-url]: https://travis-ci.org/tunnckoCoreLabs/get-installed-path
+[travis-img]: https://img.shields.io/travis/tunnckoCoreLabs/get-installed-path/master.svg?label=linux
 
-[codecov-url]: https://codecov.io/gh/tunnckoCore/get-installed-path
-[codecov-img]: https://img.shields.io/codecov/c/github/tunnckoCore/get-installed-path/master.svg
+[codecov-url]: https://codecov.io/gh/tunnckoCoreLabs/get-installed-path
+[codecov-img]: https://img.shields.io/codecov/c/github/tunnckoCoreLabs/get-installed-path/master.svg
 
-[dependencies-url]: https://david-dm.org/tunnckoCore/get-installed-path
-[dependencies-img]: https://img.shields.io/david/tunnckoCore/get-installed-path.svg
+[dependencies-url]: https://david-dm.org/tunnckoCoreLabs/get-installed-path
+[dependencies-img]: https://img.shields.io/david/tunnckoCoreLabs/get-installed-path.svg
 
 [renovate-url]: https://renovateapp.com
 [renovate-img]: https://img.shields.io/badge/renovate-enabled-brightgreen.svg
