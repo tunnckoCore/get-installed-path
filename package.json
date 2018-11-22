@@ -33,7 +33,7 @@
     "eslint-config-standard-tunnckocore": "1.0.10",
     "hela": "2.0.10",
     "hela-config-tunnckocore": "3.0.26",
-    "husky": "1.1.4",
+    "husky": "1.2.0",
     "mkdirp": "0.5.1",
     "mukla": "0.4.9",
     "pkg-dir": "3.0.0",
