@@ -5247,9 +5247,9 @@ safer-buffer@^2.0.2, safer-buffer@^2.1.0, safer-buffer@~2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
 
-semantic-release@15.12.1:
-  version "15.12.1"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.12.1.tgz#48939aaf8fd623769003f6bd76fdb974e24785b7"
+semantic-release@15.12.2:
+  version "15.12.2"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.12.2.tgz#5e02f5281b4d3bb70b0421346cd6538921f583d6"
   dependencies:
     "@semantic-release/commit-analyzer" "^6.1.0"
     "@semantic-release/error" "^2.2.0"
