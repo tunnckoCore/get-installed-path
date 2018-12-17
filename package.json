@@ -27,7 +27,7 @@
     "dist/"
   ],
   "dependencies": {
-    "global-modules": "1.0.0"
+    "global-modules": "2.0.0"
   },
   "devDependencies": {
     "eslint-config-standard-tunnckocore": "1.0.10",
