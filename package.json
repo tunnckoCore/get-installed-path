@@ -37,7 +37,7 @@
     "mkdirp": "0.5.1",
     "mukla": "0.4.9",
     "pkg-dir": "4.2.0",
-    "rimraf": "2.6.3",
+    "rimraf": "3.0.0",
     "semantic-release": "15.13.21"
   },
   "keywords": [
