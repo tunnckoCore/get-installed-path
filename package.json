@@ -38,7 +38,7 @@
     "mukla": "0.4.9",
     "pkg-dir": "4.2.0",
     "rimraf": "3.0.0",
-    "semantic-release": "16.0.1"
+    "semantic-release": "16.0.2"
   },
   "keywords": [
     "filepath",
