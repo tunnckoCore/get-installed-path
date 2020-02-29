@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "eslint-config-standard-tunnckocore": "1.0.10",
-    "hela": "2.0.10",
+    "hela": "3.1.0",
     "hela-config-tunnckocore": "3.0.26",
     "husky": "4.2.3",
     "mkdirp": "1.0.3",
